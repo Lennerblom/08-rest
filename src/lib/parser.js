@@ -11,22 +11,21 @@ module.exports = (req) => {
     if( !(req || req.url) ) { reject('Invalid Request Object. Cannot Parse'); }
 
     //req.url = 'http://localhost:3002/api/v1/notes?id=12345';
+
     req.parsed = url.parse(req.url);
     
     // req.parsed = {
-    //   pathname: '/api/vi/dogs',
-    //   query: '?id=123&name=Masey',
-    // };
-       
+    //   pathname: '/api/vi/something,
+    //   query: '?id=123&name=someName',
+    // }; 
 
     req.query = queryString.parse(req.parsed.query);
     
     // req.query = {
     //   id:123,
-    //   name:'Masey',
+    //   name:'someName',
     // };
        
-
     if(! req.method.match(/POST|PUT|PATCH/) ) {
       resolve(req);
     }

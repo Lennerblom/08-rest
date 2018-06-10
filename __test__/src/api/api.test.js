@@ -1,19 +1,23 @@
 'use strict';
 
-const api = require('../../../src/api/api.js');
+require('../../../src/api/api.js');
 const superagent = require('superagent');
 
 describe('api', () => {
   //let expected, actual;
   it('should return the ID for GET /?id =123', () => {
-
+    
     superagent
       .get('http://localhost:3002/api/vi/dogs?id=123')
       .then(data => console.log(data))
       .catch(err => console.error(err));
+    // let actual = data;
+    // let expected = 123;
+    // expect(actual).toBe(expected);
+   
   });
 
-  it('POST should return a status code 400 with "bad request" if no request body was provided or the body was invalid', () => {
+  xit('POST should return a status code 400 with "bad request" if no request body was provided or the body was invalid', () => {
     superagent
       .post('http://localhost:3002/data')
       .then(data => console.log(data))

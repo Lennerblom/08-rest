@@ -1,60 +1,7 @@
-08: REST
+08: Vanilla RESTful API
 ======
 
-## Submission Instructions
-* Work in a fork of this repository
-* Work in a branch on your fork
-* Create a PR to your master from your working branch.
-* Ensure that your repository/branch is connected to travis-ci.com
-* Ensure that your repository/branch is connected to a dyno at heroku.com
-* Heroku and Travis should pick you up and deploy
-* Submit on canvas:
-  * a question and observation
-  * how long you spent
-  * link to your pull request
-  * link to your build at travis-ci URL
-  * Heroku Server URL
-
-## Configuration 
-Configure the root of your repository with the following files and directories. Thoughfully name and organize any aditional configuration or module files.
-* **README.md** - contains documentation
-* **.env** - contains env variables (should be git ignored)
-* **.gitignore** - contains a [robust](http://gitignore.io) `.gitignore` file 
-* **.eslintrc** - contains the course linter configuratoin
-* **.eslintignore** - contains the course linter ignore configuration
-* **.travis.yml** - contains the course linter ignore configuration
-* **package.json** - contains npm package config
-  * create a `lint` script for running eslint (eslint **/*.js)
-  * create a `test` script for running tests
-  * create a `start` script for running your server
-* **index.js** - the entry point for your application
-* **src/** - contains your core application files and folders
-* **src/app.js** - (or main.js) contains your core application bootstrap
-* **src/lib/** - contains module definitions
-* **\_\_test\_\_/** - contains unit tests
-
-## Learning Objectives  
-* students will learn to use promise constructs to manage asynchronous code
-* students will learn to create a vanilla RESTful API
-
-#### Feature Tasks
-* create the following directories to organize your code:
-  * `src`
-  * `src/lib`
-  * `src/api`
-  * `__test__`
-* create an HTTP server using the native NodeJS `http` module
-* create a custom parser module that:
-  * uses promises to parse the JSON body of `POST` and `PUT` requests
-  * uses the NodeJS `url` and `querystring` modules to parse the request url
-* create a router constructor that allows you to register custom routes for `GET`, `POST`, `PUT`, and `DELETE` requests
-* create a router constructor that handles requests to `GET`, `POST`, `PUT`, and `DELETE` using the custom routes defined
-
-## Server Endpoints
-### `/api/v1/simple-resource-name`
-**These will be "proof of life" endpoints, to prove server health**
-
-NOTE: simple-resource-name is left up to you. E.g. dog, cat, whatever...
+This HTTP server was created using the native NodeJS http module.  The home route URL is: http://localhost:3002/ and accepts an optional name query string (?name=name), which will display "Hello" or "Hello Name" if option is added.  It will handle GET, POST, PUT and DELETE requests. For a GET request, the URL is: http://localhost:3002/api/v1/dogs?id=1976 will return 1976.  This server doesn't persist data in it's current state, and only numerical ID's greater that 0 and up to 2018 are accepted.  If another valid id is entered, a 404 'not found' will display, and a 400 error for queries that are not valid id requests.
 
 * `POST` request
  * pass data as stringifed JSON in the body of a **POST** request 
