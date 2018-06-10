@@ -25,7 +25,7 @@ describe('api', () => {
   });
 });
 
-
+//5:52 video example
 // write a test to ensure that your api returns a status code of 404 for routes that have not been registered
 // write tests to ensure the /api/simple-resource-name endpoint responds as described for each condition below:
 // GET: test 404, it should respond with 'not found' for valid requests made with an id that was not found
