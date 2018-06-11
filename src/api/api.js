@@ -19,6 +19,7 @@ router.get('/api/v1/dogs', (req, res) => {
   } else if(id) {
     res.statusCode = 404;
     res.statusMessage = 'not found';
+    console.log(res.statusMessage);
   } else {
     res.statusCode = 400;
     res.statusMessage = 'bad request';
