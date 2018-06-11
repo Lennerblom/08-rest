@@ -1,12 +1,12 @@
 [![Build Status](https://travis-ci.org/Lennerblom/08-rest.svg?branch=master)](https://travis-ci.org/Lennerblom/08-rest)
 
-08: Vanilla RESTful API
-======
-######TRAVIS:
+# 08: Vanilla RESTful API
+___
+######TRAVIS: https://travis-ci.org/Lennerblom/08-rest
 ######HEROKU: https://vanilla-http-server08.herokuapp.com/
 ######PR: 
-
-This HTTP server was created using the native NodeJS http module.  The home route URL is: http://localhost:3002/ and accepts an optional name query string (?name=name), which will display "Hello" or "Hello Name" if option is added.  It will handle `GET`, `POST`, `PUT` and `DELETE` requests. For a GET request, the URL is: http://localhost:3002/api/v1/dogs?id=1976 will return 1976.  This server doesn't persist data in it's current state, and only numerical ID's greater that 0 and up to 2018 are accepted.  If another valid id is entered, a 404 'not found' will display, and a 400 error for queries that are not valid id requests.
+___
+This HTTP server was created using the native NodeJS http module.  The home route URL is: https://vanilla-http-server08.herokuapp.com/ and accepts an optional name query string (?name=name), which will display "Hello" or "Hello Name" if option is added.  It will handle `GET`, `POST`, `PUT` and `DELETE` requests. 
 
 ###**In order to run my app, do the following:**
 
